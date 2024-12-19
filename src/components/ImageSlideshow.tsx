@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
@@ -17,6 +19,14 @@ export function ImageSlideshow() {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const goToPrevious = () => {
+    setCurrentIndex((current) => (current === 0 ? images.length - 1 : current - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((current) => (current + 1) % images.length);
+  };
 
   return (
     <div className="relative w-full h-[60vh] overflow-hidden rounded-lg">
@@ -36,6 +46,22 @@ export function ImageSlideshow() {
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
         </div>
       ))}
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/50 hover:bg-background/80"
+        onClick={goToPrevious}
+      >
+        <ChevronLeft className="h-4 w-4" />
+      </Button>
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/50 hover:bg-background/80"
+        onClick={goToNext}
+      >
+        <ChevronRight className="h-4 w-4" />
+      </Button>
     </div>
   );
 }
