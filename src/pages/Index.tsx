@@ -77,7 +77,7 @@ const Index = () => {
           Welcome to Ungaatheble
         </h1>
         <p className="text-xl text-center text-muted-foreground mb-8">
-          Where passion meets innovation
+          Where Passion Meets Innovation
         </p>
         <ImageSlideshow />
       </section>
