@@ -23,6 +23,24 @@ const teamMembers = [
     role: "Lead Developer",
     image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
   },
+  {
+    id: "4",
+    name: "Sarah Wilson",
+    role: "UI/UX Designer",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+  },
+  {
+    id: "5",
+    name: "David Brown",
+    role: "Backend Developer",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+  },
+  {
+    id: "6",
+    name: "Emily Davis",
+    role: "Product Manager",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+  },
 ];
 
 const projects = [
